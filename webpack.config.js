@@ -5,5 +5,21 @@ module.exports={
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname,'dist')
+    },
+    module:{
+        rules:[
+            {
+                test:/\.css$/,
+                use:['style-loader','css-loader']
+            },
+            {
+                test:/\.(png|jpg|jpeg|svg|gif)$/,
+                use:'file-loader'
+            },
+            {
+                test:/\.(otf|eot|ttf|woff|woff2)/,
+                use:['file-loader']
+            }
+        ]
     }
 }
