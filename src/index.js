@@ -1,6 +1,5 @@
 import * as _ from "lodash"
 
-console.log(_.join);
 function component() {
     var element = document.createElement('div');
 
